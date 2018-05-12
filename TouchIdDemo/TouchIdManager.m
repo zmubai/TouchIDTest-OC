@@ -149,8 +149,6 @@ static NSString *const CURRENT_TOUCH_ID_IDENTITY_PERFIX = @"TOUCH_ID@";
 + (NSData*)currentTouchIdDataForCompare
 {
     return  [self currentOriTouchIdData];
-//    NSString *stringValue = [self stringValueWithTouchIdData:data];
-//    return [self dataWithTouchIdDataStringValue:stringValue];
 }
 
 + (NSData*)currentOriTouchIdData
@@ -174,28 +172,10 @@ static NSString *const CURRENT_TOUCH_ID_IDENTITY_PERFIX = @"TOUCH_ID@";
     {
         return nil;
     }
-    //    NSDictionary *dicts = [[NSUserDefaults standardUserDefaults ]valueForKey:TOUCH_ID_DATA_SERVICE];
-    //    if (!dicts || ![dicts isKindOfClass:[NSDictionary class]]) {
-    //        return nil;
-    //    }
-    //    else
-    //    {
-    //        NSString *stringValue = [dicts valueForKey:[self currentTouchIdDataIdentity]];
-    //        return  [self dataWithTouchIdDataStringValue:stringValue];
-    //    }
 }
 
 + (BOOL)setCurrentIdentityTouchIdData:(NSData *)data
 {
-    //    NSMutableArray *touchIdDatas;
-    //    NSDictionary *dicts = [[NSUserDefaults standardUserDefaults ]valueForKey:TOUCH_ID_DATA_SERVICE];
-    //    if (!dicts || ![dicts isKindOfClass:[NSDictionary class]]) {
-    //        touchIdDatas = @{}.mutableCopy;
-    //    }
-    //    else
-    //    {
-    //        touchIdDatas = dicts.mutableCopy;
-    //    }
     if ([self accountForKeychainWithIdentify]) {
         NSError *error;
         [SAMKeychain setPasswordData:data forService:TOUCH_ID_DATA_SERVICE account:[self accountForKeychainWithIdentify] error:&error];
@@ -221,17 +201,6 @@ static NSString *const CURRENT_TOUCH_ID_IDENTITY_PERFIX = @"TOUCH_ID@";
     NSError *error;
     [context canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&error];
     return error.code == kLAErrorTouchIDLockout ? YES : NO;
-}
-
-#pragma mark - 转换方法 可重写
-+ (NSString*)stringValueWithTouchIdData:(NSData *)data
-{
-    return [[NSString alloc]initWithData:data encoding:NSUnicodeStringEncoding];
-}
-
-+ (NSData*)dataWithTouchIdDataStringValue:(NSString *)stringValue
-{
-    return [stringValue dataUsingEncoding:NSUnicodeStringEncoding];
 }
 
 @end
