@@ -83,7 +83,7 @@ static NSString *const CURRENT_TOUCH_ID_IDENTITY_PERFIX = @"TOUCH_ID@";
                             !resultBlock ?: resultBlock(YES, YES,nil);
                         } else {
                             if (error.code == LAErrorTouchIDLockout) {
-                                [self tryShowTouchIdOrLockPwdWithTitle:title resultBlock:resultBlock];
+                                [self tryShowTouchIdOrPwdInterface:title resultBlock:resultBlock];
                             }
                             else if (error.code == LAErrorUserFallback)
                             {
@@ -100,7 +100,7 @@ static NSString *const CURRENT_TOUCH_ID_IDENTITY_PERFIX = @"TOUCH_ID@";
                 }];
     } else {
         if (error.code == LAErrorTouchIDLockout) {
-            [self tryShowTouchIdOrLockPwdWithTitle:title resultBlock:resultBlock];
+            [self tryShowTouchIdOrPwdInterface:title resultBlock:resultBlock];
         }
         else
         {
@@ -109,7 +109,7 @@ static NSString *const CURRENT_TOUCH_ID_IDENTITY_PERFIX = @"TOUCH_ID@";
     }
 }
 
-+ (void)tryShowTouchIdOrLockPwdWithTitle:(NSString *)title resultBlock:(TouchIdResultBlock)resultBlock
++ (void)tryShowTouchIdOrPwdInterface:(NSString *)title resultBlock:(TouchIdResultBlock)resultBlock
 {
     //初始化上下文对象
     LAContext *context = [[LAContext alloc] init];
@@ -123,11 +123,7 @@ static NSString *const CURRENT_TOUCH_ID_IDENTITY_PERFIX = @"TOUCH_ID@";
         [context evaluatePolicy:kLAPolicyDeviceOwnerAuthentication
                 localizedReason:result reply:^(BOOL success, NSError * _Nullable error) {
                     dispatch_async(dispatch_get_main_queue(), ^{
-                        if (success) {
-                            !resultBlock ?: resultBlock(YES, YES,nil);
-                        } else {
-                            !resultBlock ?: resultBlock(YES, NO, error);
-                        }
+                        !resultBlock ?: resultBlock(YES, success,error);
                     });
                 }];
     } else {
