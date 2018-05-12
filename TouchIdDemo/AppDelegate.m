@@ -2,11 +2,12 @@
 //  AppDelegate.m
 //  TouchIdDemo
 //
-//  Created by miaolian008 on 2018/5/9.
-//  Copyright © 2018年 miaolian008. All rights reserved.
+//  Created by zmubai on 2018/5/9.
+//  Copyright © 2018年 zmubai. All rights reserved.
 //
 
 #import "AppDelegate.h"
+#import "TouchIdManager.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [TouchIdManager setCurrentTouchIdDataIdentity:@"DOTA"];
+    [TouchIdManager setCurrentIdentityTouchIdData];
     return YES;
 }
 

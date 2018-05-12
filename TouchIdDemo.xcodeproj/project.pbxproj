@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB8DA7E020A675BA007D68E1 /* SAMKeychainQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = DB8DA7DC20A675BA007D68E1 /* SAMKeychainQuery.m */; };
+		DB8DA7E120A675BA007D68E1 /* SAMKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = DB8DA7DF20A675BA007D68E1 /* SAMKeychain.m */; };
 		EFE5FF4A20A2CE8B001B7E1A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE5FF4920A2CE8B001B7E1A /* AppDelegate.m */; };
 		EFE5FF4D20A2CE8C001B7E1A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE5FF4C20A2CE8C001B7E1A /* ViewController.m */; };
 		EFE5FF5020A2CE8C001B7E1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFE5FF4E20A2CE8C001B7E1A /* Main.storyboard */; };
@@ -15,6 +17,7 @@
 		EFE5FF5820A2CE8E001B7E1A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE5FF5720A2CE8E001B7E1A /* main.m */; };
 		EFE5FF6220A2CE8E001B7E1A /* TouchIdDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE5FF6120A2CE8E001B7E1A /* TouchIdDemoTests.m */; };
 		EFE5FF6D20A2CE8E001B7E1A /* TouchIdDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE5FF6C20A2CE8E001B7E1A /* TouchIdDemoUITests.m */; };
+		EFE5FFB820A2D833001B7E1A /* TouchIdManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE5FFB720A2D833001B7E1A /* TouchIdManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DB8DA7DC20A675BA007D68E1 /* SAMKeychainQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAMKeychainQuery.m; sourceTree = "<group>"; };
+		DB8DA7DD20A675BA007D68E1 /* SAMKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAMKeychain.h; sourceTree = "<group>"; };
+		DB8DA7DE20A675BA007D68E1 /* SAMKeychainQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SAMKeychainQuery.h; sourceTree = "<group>"; };
+		DB8DA7DF20A675BA007D68E1 /* SAMKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SAMKeychain.m; sourceTree = "<group>"; };
 		EFE5FF4520A2CE8B001B7E1A /* TouchIdDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TouchIdDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFE5FF4820A2CE8B001B7E1A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EFE5FF4920A2CE8B001B7E1A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -51,6 +58,8 @@
 		EFE5FF6820A2CE8E001B7E1A /* TouchIdDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TouchIdDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFE5FF6C20A2CE8E001B7E1A /* TouchIdDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TouchIdDemoUITests.m; sourceTree = "<group>"; };
 		EFE5FF6E20A2CE8E001B7E1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFE5FFB620A2D833001B7E1A /* TouchIdManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TouchIdManager.h; sourceTree = "<group>"; };
+		EFE5FFB720A2D833001B7E1A /* TouchIdManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TouchIdManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +87,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB8DA7DB20A675BA007D68E1 /* SAMKeychain */ = {
+			isa = PBXGroup;
+			children = (
+				DB8DA7DE20A675BA007D68E1 /* SAMKeychainQuery.h */,
+				DB8DA7DC20A675BA007D68E1 /* SAMKeychainQuery.m */,
+				DB8DA7DD20A675BA007D68E1 /* SAMKeychain.h */,
+				DB8DA7DF20A675BA007D68E1 /* SAMKeychain.m */,
+			);
+			path = SAMKeychain;
+			sourceTree = "<group>";
+		};
 		EFE5FF3C20A2CE8B001B7E1A = {
 			isa = PBXGroup;
 			children = (
@@ -101,10 +121,13 @@
 		EFE5FF4720A2CE8B001B7E1A /* TouchIdDemo */ = {
 			isa = PBXGroup;
 			children = (
+				DB8DA7DB20A675BA007D68E1 /* SAMKeychain */,
 				EFE5FF4820A2CE8B001B7E1A /* AppDelegate.h */,
 				EFE5FF4920A2CE8B001B7E1A /* AppDelegate.m */,
 				EFE5FF4B20A2CE8C001B7E1A /* ViewController.h */,
 				EFE5FF4C20A2CE8C001B7E1A /* ViewController.m */,
+				EFE5FFB620A2D833001B7E1A /* TouchIdManager.h */,
+				EFE5FFB720A2D833001B7E1A /* TouchIdManager.m */,
 				EFE5FF4E20A2CE8C001B7E1A /* Main.storyboard */,
 				EFE5FF5120A2CE8E001B7E1A /* Assets.xcassets */,
 				EFE5FF5320A2CE8E001B7E1A /* LaunchScreen.storyboard */,
@@ -195,23 +218,26 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0930;
-				ORGANIZATIONNAME = miaolian008;
+				ORGANIZATIONNAME = zmubai;
 				TargetAttributes = {
 					EFE5FF4420A2CE8B001B7E1A = {
 						CreatedOnToolsVersion = 9.3;
+						ProvisioningStyle = Manual;
 					};
 					EFE5FF5C20A2CE8E001B7E1A = {
 						CreatedOnToolsVersion = 9.3;
+						ProvisioningStyle = Automatic;
 						TestTargetID = EFE5FF4420A2CE8B001B7E1A;
 					};
 					EFE5FF6720A2CE8E001B7E1A = {
 						CreatedOnToolsVersion = 9.3;
+						ProvisioningStyle = Automatic;
 						TestTargetID = EFE5FF4420A2CE8B001B7E1A;
 					};
 				};
 			};
 			buildConfigurationList = EFE5FF4020A2CE8B001B7E1A /* Build configuration list for PBXProject "TouchIdDemo" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -263,7 +289,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFE5FF4D20A2CE8C001B7E1A /* ViewController.m in Sources */,
+				DB8DA7E120A675BA007D68E1 /* SAMKeychain.m in Sources */,
 				EFE5FF5820A2CE8E001B7E1A /* main.m in Sources */,
+				DB8DA7E020A675BA007D68E1 /* SAMKeychainQuery.m in Sources */,
+				EFE5FFB820A2D833001B7E1A /* TouchIdManager.m in Sources */,
 				EFE5FF4A20A2CE8B001B7E1A /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -370,7 +399,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -422,7 +451,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -433,14 +462,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = DBJ7NHT373;
 				INFOPLIST_FILE = TouchIdDemo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = daxia.cn.TouchIdDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "7d5b07c7-c2df-4b1f-b870-36dfaa3e493b";
+				PROVISIONING_PROFILE_SPECIFIER = hufu2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -449,14 +479,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = DBJ7NHT373;
 				INFOPLIST_FILE = TouchIdDemo/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = daxia.cn.TouchIdDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "7d5b07c7-c2df-4b1f-b870-36dfaa3e493b";
+				PROVISIONING_PROFILE_SPECIFIER = hufu2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -467,11 +498,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TouchIdDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = daxia.cn.TouchIdDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -485,11 +512,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TouchIdDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = daxia.cn.TouchIdDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -502,11 +525,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TouchIdDemoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = daxia.cn.TouchIdDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -519,11 +538,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TouchIdDemoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = daxia.cn.TouchIdDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
