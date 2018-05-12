@@ -38,7 +38,7 @@ typedef void(^TouchIdResultBlock)(BOOL useable, BOOL success, NSError *error);
 
 
 /**
- 检测对于当前身份的touchId信息是否变更，需先设置setCurrentTouchIdDataIdentity绑定身份
+ 检测当前身份的touchId信息是否变更，需先设置setCurrentTouchIdDataIdentity绑定身份
 
  @return <#return value description#>
  */
@@ -51,7 +51,7 @@ typedef void(^TouchIdResultBlock)(BOOL useable, BOOL success, NSError *error);
  @param title 指纹解锁副标题
  @param falllBackTitle fallBack标题
  @param fallBackBlock fallBack回调
- @param resultBlock 解锁回到
+ @param resultBlock 解锁回调
  */
 + (void)showTouchIdWithTitle:(NSString *)title falldBackTitle:(NSString *)falllBackTitle fallBackBlock:(TouchIdFallBackBlock)fallBackBlock resultBlock:(TouchIdResultBlock)resultBlock;
 
