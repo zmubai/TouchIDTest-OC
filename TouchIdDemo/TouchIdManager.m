@@ -172,7 +172,7 @@ static NSString *const CURRENT_TOUCH_ID_IDENTITY_PERFIX = @"TOUCH_ID@";
 
 + (BOOL)setCurrentIdentityTouchIdData:(NSData *)data
 {
-    if ([self accountForKeychainWithIdentify]) {
+    if ([self accountForKeychainWithIdentify] && data) {
         NSError *error;
         [SAMKeychain setPasswordData:data forService:TOUCH_ID_DATA_SERVICE account:[self accountForKeychainWithIdentify] error:&error];
         if (!error) {
